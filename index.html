@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MUR is a low-cost autonomous underwater vehicle prototype from SCALAR LABS at Information Technology University.">
+  <meta name="theme-color" content="#05111f">
+  <meta property="og:title" content="MUR - Miniature Underwater Robot">
+  <meta property="og:description" content="A nearly 10x cheaper autonomous underwater vehicle prototype for inspection, mapping, and mine detection.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/sear-logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MUR - Miniature Underwater Robot">
+  <meta name="twitter:description" content="Low-cost AUV prototype developed at ITU's SCALAR LABS.">
+  <link rel="icon" href="images/sear-logo.png">
+  <title>MUR - Miniature Underwater Robot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body data-page="home">
+  <div class="site-shell">
+    <div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <div class="nav-inner">
+        <a class="brand" href="#home" aria-label="MUR home">
+          <span class="brand-mark"><i data-lucide="radar"></i></span>
+          <span>MUR <small>SCALAR LABS / ITU</small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+          <i data-lucide="menu"></i>
+        </button>
+        <div class="nav-links">
+          <a class="nav-link" href="#home">Home</a>
+          <a class="nav-link" href="#problem">Problem</a>
+          <a class="nav-link" href="#tech">Tech</a>
+          <a class="nav-link" href="#demo">Demo</a>
+          <a class="nav-link" href="#roadmap">Timeline</a>
+          <a class="nav-link" href="#team">Team</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section id="home" class="hero" aria-label="MUR hero">
+        <canvas class="particles" aria-hidden="true"></canvas>
+        <div class="container hero-grid">
+          <div class="hero-copy" data-aos="fade-up">
+            <div class="eyebrow">Low-cost autonomous underwater vehicle</div>
+            <h1 class="hero-title">MUR <span>Miniature Underwater Robot</span></h1>
+            <p class="lead">A prototype AUV developed at Information Technology University by SCALAR LABS for underwater bridge inspection, infrastructure inspection, mapping, pollution monitoring, mine detection, and defense applications.</p>
+            <div class="hero-actions">
+              <a class="btn primary magnetic" href="#demo"><i data-lucide="play"></i> Watch Demo</a>
+              <a class="btn magnetic" href="#tech"><i data-lucide="cpu"></i> Explore System</a>
+            </div>
+            <div class="hero-metrics" aria-label="Project highlights">
+              <div class="metric">
+                <span class="metric-value count" data-target="500" data-prefix="$">0</span>
+                <span>Current prototype cost</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value count" data-target="10" data-suffix="x">0</span>
+                <span>Cheaper than comparable systems</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">ROS</span>
+                <span>Simulation and autonomy stack</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="model-stage" data-aos="zoom-in" data-aos-delay="120">
+            <span class="info-chip"><i data-lucide="badge-check"></i> Prototype</span>
+            <span class="info-chip"><i data-lucide="route"></i> Autonomous</span>
+            <span class="info-chip"><i data-lucide="network"></i> ROS Powered</span>
+            <span class="info-chip"><i data-lucide="wallet"></i> Low Cost</span>
+            <span class="info-chip"><i data-lucide="trending-down"></i> 10x Cheaper</span>
+            <model-viewer src="assets/mur-submarine.glb" auto-rotate rotation-per-second="12deg" camera-controls disable-zoom shadow-intensity="1" exposure="0.9" environment-image="neutral" poster="" aria-label="Interactive 3D model of MUR"></model-viewer>
+            <div class="model-fallback" aria-hidden="true">
+              <div class="auv-visual">
+                <span class="auv-light"></span>
+                <span class="auv-fin top"></span>
+                <span class="auv-fin bottom"></span>
+                <span class="auv-body"></span>
+                <span class="auv-nose"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="scroll-cue" href="#problem" aria-label="Scroll to problem statement"><span></span></a>
+        <div class="wave" aria-hidden="true"></div>
+      </section>
+
+      <section id="problem" class="section">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <div class="eyebrow">Prototype stage</div>
+            <h2>One robot, three domains</h2>
+            <p class="lead">MUR is a low-cost autonomous underwater vehicle (AUV) built to serve commercial, environmental, and safety applications from a single hardware platform.</p>
+          </div>
+          <div class="domain-grid">
+            <article class="glass-card domain-card" data-aos="fade-up">
+              <div class="icon-box"><i data-lucide="bridge"></i></div>
+              <h3>Commercial</h3>
+              <p>Underwater bridge and infrastructure inspection, 3D mapping of underwater structures and terrain.</p>
+            </article>
+            <article class="glass-card domain-card" data-aos="fade-up" data-aos-delay="90">
+              <div class="icon-box"><i data-lucide="leaf"></i></div>
+              <h3>Environmental</h3>
+              <p>Monitoring underwater pollution levels and tracking environmental impact in real time.</p>
+            </article>
+            <article class="glass-card domain-card" data-aos="fade-up" data-aos-delay="180">
+              <div class="icon-box"><i data-lucide="shield"></i></div>
+              <h3>Safety / Military</h3>
+              <p>Underwater mine detection and related defense and security applications.</p>
+            </article>
+          </div>
+          <div class="cost-card" data-aos="fade-up">
+            <div class="cost-primary">
+              <div class="eyebrow">Cost comparison</div>
+              <span class="metric-value count" data-target="500" data-prefix="~$">0</span>
+              <p>MUR prototype cost compared to approximately $5,000 for comparable commercial underwater drones. The platform is nearly 10x cheaper.</p>
+            </div>
+            <div class="price-bars" aria-label="Cost comparison chart">
+              <div class="price-row">
+                <div class="price-label"><span>MUR prototype</span><span>~$500</span></div>
+                <div class="bar"><span style="--w: 10%"></span></div>
+              </div>
+              <div class="price-row">
+                <div class="price-label"><span>Comparable commercial underwater drones</span><span>~$5,000</span></div>
+                <div class="bar commercial"><span style="--w: 100%"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tech" class="section compact">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <div class="eyebrow">Technical overview</div>
+            <h2>Prototype-grade hardware with an autonomy roadmap</h2>
+            <p class="lead">Built on ROS + Gazebo simulation, with Sliding Mode Control, LQR, and EKF SLAM for mapping.</p>
+          </div>
+          <div class="tech-layout">
+            <aside class="glass-card system-panel" data-aos="fade-right">
+              <div class="status"><i data-lucide="activity"></i> ESP32 to Raspberry Pi 4 migration planned</div>
+              <h3>Integrated AUV Stack</h3>
+              <p>MUR combines low-cost embedded control, sensor fusion, sealed chassis design, and simulation-driven autonomy into a compact underwater inspection platform.</p>
+              <div class="schematic" aria-hidden="true"><div class="core">MUR<br>AUV</div></div>
+              <p>Current stage: Prototype. Target missions include bridge inspection, infrastructure inspection, underwater mapping, pollution monitoring, mine detection, and defense applications.</p>
+            </aside>
+            <div class="tech-groups">
+              <article class="glass-card tech-group" data-aos="fade-left">
+                <div class="group-title"><h3>Sensor Stack</h3><span>Fusion layer</span></div>
+                <div class="chip-grid">
+                  <div class="chip"><strong>HMC5883L</strong><span>Magnetometer</span></div>
+                  <div class="chip"><strong>MPU6050</strong><span>Accelerometer</span></div>
+                  <div class="chip"><strong>LSM6DS3</strong><span>IMU</span></div>
+                  <div class="chip"><strong>BMP280</strong><span>Pressure sensor</span></div>
+                  <div class="chip"><strong>AHT20</strong><span>Environmental sensor</span></div>
+                </div>
+              </article>
+              <article class="glass-card tech-group" data-aos="fade-left" data-aos-delay="80">
+                <div class="group-title"><h3>Control &amp; Power</h3><span>Embedded control</span></div>
+                <div class="chip-grid">
+                  <div class="chip"><strong>ESP32</strong><span>Thruster control</span></div>
+                  <div class="chip"><strong>ESP32</strong><span>Sensor interfacing</span></div>
+                  <div class="chip"><strong>BLDC Thrusters</strong><span>1000Kv / 1400Kv dual thruster</span></div>
+                  <div class="chip"><strong>ESC</strong><span>Electronic speed control</span></div>
+                  <div class="chip"><strong>4S Battery</strong><span>10,000mAh power supply with BMS</span></div>
+                </div>
+              </article>
+              <article class="glass-card tech-group" data-aos="fade-left" data-aos-delay="160">
+                <div class="group-title"><h3>Hull, Chassis &amp; Software</h3><span>Vehicle system</span></div>
+                <div class="chip-grid">
+                  <div class="chip"><strong>3D-Printed Body</strong><span>PLA / ABS filament</span></div>
+                  <div class="chip"><strong>Acrylic Tube Housing</strong><span>Laser-cut, molded housing</span></div>
+                  <div class="chip"><strong>End Caps &amp; O-Ring Seals</strong><span>Waterproofing</span></div>
+                  <div class="chip"><strong>ROS + Gazebo</strong><span>Simulation and autonomy</span></div>
+                  <div class="chip"><strong>SMC / LQR / EKF SLAM</strong><span>Control and mapping stack</span></div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="demo" class="section">
+        <div class="container demo-shell">
+          <div class="section-header" data-aos="fade-up">
+            <div class="eyebrow">Demo</div>
+            <h2>Designed for real underwater field work</h2>
+            <p class="lead">A modern demo container is ready for prototype footage, simulation captures, and pool test clips as the vehicle matures.</p>
+            <div class="contact-actions">
+              <a class="btn primary magnetic" href="#contact"><i data-lucide="send"></i> Request Collaboration</a>
+            </div>
+          </div>
+          <div class="video-frame" data-aos="zoom-in">
+            <video controls preload="metadata" poster="assets/video-poster.jpg">
+              <source src="assets/demo.mp4" type="video/mp4">
+            </video>
+            <div class="video-placeholder" aria-hidden="true"><div class="play-button"><i data-lucide="play"></i></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="roadmap" class="section compact">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <div class="eyebrow">Status &amp; roadmap</div>
+            <h2>From prototype assembly to field trials</h2>
+          </div>
+          <div class="timeline">
+            <article class="glass-card step done" data-aos="fade-up">
+              <div class="step-marker"><i data-lucide="check"></i></div>
+              <h3>Done</h3>
+              <p>Core hardware assembly, sensor integration, ESP32 control.</p>
+            </article>
+            <article class="glass-card step progress" data-aos="fade-up" data-aos-delay="100">
+              <div class="step-marker"><i data-lucide="loader"></i></div>
+              <h3>In Progress</h3>
+              <p>SLAM mapping and pool testing.</p>
+            </article>
+            <article class="glass-card step planned" data-aos="fade-up" data-aos-delay="200">
+              <div class="step-marker"><i data-lucide="rocket"></i></div>
+              <h3>Planned</h3>
+              <p>Raspberry Pi 4 migration and field trials.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="team" class="section">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <div class="eyebrow">Team</div>
+            <h2>Built by researchers and engineers at ITU</h2>
+          </div>
+          <div class="team-grid">
+            <article class="glass-card profile" data-aos="fade-up">
+              <img src="images/AliMurtaza.jpg" alt="Dr. Ali Murtaza" loading="lazy">
+              <h3>Dr. Ali Murtaza</h3>
+              <p>Supervisor, ITU</p>
+              <span class="role-badge">Supervisor</span>
+              <div class="socials"><a href="https://www.linkedin.com/in/mamurtaza" target="_blank" rel="noopener noreferrer" aria-label="Dr. Ali Murtaza LinkedIn"><span class="linkedin-mark">in</span></a><button class="email-reveal" type="button" aria-label="Dr. Ali Murtaza email: alimurtaza@itu.edu.pk"><span class="email-icon"><i data-lucide="mail"></i></span><span class="email-text">alimurtaza@itu.edu.pk</span></button></div>
+            </article>
+            <article class="glass-card profile" data-aos="fade-up" data-aos-delay="70">
+              <img src="images/Shariq.jpeg" alt="M. Shariq Shoaib" loading="lazy">
+              <h3>M. Shariq Shoaib</h3>
+              <p>Role / Discipline</p>
+              <span class="role-badge">Research Team</span>
+              <div class="socials"><a href="https://www.linkedin.com/in/shariq-shoaib-40ab21370/" target="_blank" rel="noopener noreferrer" aria-label="M. Shariq Shoaib LinkedIn"><span class="linkedin-mark">in</span></a><button class="email-reveal" type="button" aria-label="M. Shariq Shoaib email: bscs23180@itu.edu.pk"><span class="email-icon"><i data-lucide="mail"></i></span><span class="email-text">bscs23180@itu.edu.pk</span></button></div>
+            </article>
+            <article class="glass-card profile" data-aos="fade-up" data-aos-delay="140">
+              <img src="images/Safwan.jpeg" alt="Safwan Ahmed" loading="lazy">
+              <h3>Safwan Ahmed</h3>
+              <p>Role / Discipline</p>
+              <span class="role-badge">Research Team</span>
+              <div class="socials"><a href="https://www.linkedin.com/in/safwan-ahmad-02b035371/" target="_blank" rel="noopener noreferrer" aria-label="Safwan Ahmed LinkedIn"><span class="linkedin-mark">in</span></a><button class="email-reveal" type="button" aria-label="Safwan Ahmed email: bscs23083@itu.edu.pk"><span class="email-icon"><i data-lucide="mail"></i></span><span class="email-text">bscs23083@itu.edu.pk</span></button></div>
+            </article>
+            <article class="glass-card profile" data-aos="fade-up" data-aos-delay="210">
+              <img src="images/Okasha.jpeg" alt="M. Okasha Khan" loading="lazy">
+              <h3>M. Okasha Khan</h3>
+              <p>Role / Discipline</p>
+              <span class="role-badge">Research Team</span>
+              <div class="socials"><a href="https://www.linkedin.com/in/muhammad-okasha-khan/" target="_blank" rel="noopener noreferrer" aria-label="M. Okasha Khan LinkedIn"><span class="linkedin-mark">in</span></a><button class="email-reveal" type="button" aria-label="M. Okasha Khan email: bscs23032@itu.edu.pk"><span class="email-icon"><i data-lucide="mail"></i></span><span class="email-text">bscs23032@itu.edu.pk</span></button></div>
+            </article>
+            <article class="glass-card profile" data-aos="fade-up" data-aos-delay="280">
+              <img src="images/Asharib.jpeg" alt="Muhammad Asharib" loading="lazy">
+              <h3>Muhammad Asharib</h3>
+              <p>Role / Discipline</p>
+              <span class="role-badge">Research Team</span>
+              <div class="socials"><a href="https://www.linkedin.com/in/muhammad-asharib-09b035371/" target="_blank" rel="noopener noreferrer" aria-label="Muhammad Asharib LinkedIn"><span class="linkedin-mark">in</span></a><button class="email-reveal" type="button" aria-label="Muhammad Asharib email: bscs23038@itu.edu.pk"><span class="email-icon"><i data-lucide="mail"></i></span><span class="email-text">bscs23038@itu.edu.pk</span></button></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section compact">
+        <div class="container">
+          <div class="contact-panel" data-aos="fade-up">
+            <div>
+              <div class="eyebrow">Contact</div>
+              <h2>Collaborate with us</h2>
+              <p class="lead">Interested in MUR for research, industry, or investment? Get in touch with the SCALAR LABS team.</p>
+              <ul class="contact-list">
+                <li><i data-lucide="map-pin"></i> Information Technology University (ITU), Lahore</li>
+                <li><i data-lucide="flask-conical"></i> SCALAR LABS</li>
+                <li><i data-lucide="mail"></i> alimurtaza@itu.edu.pk</li>
+              </ul>
+            </div>
+            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="0beaf632-e8bf-47ad-80b3-432ba8e4b735">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
+              </div>
+              <div class="field full">
+                <label for="organization">Organization</label>
+                <input id="organization" name="organization" type="text" autocomplete="organization">
+              </div>
+              <div class="field full">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+              <!-- <p class="form-note">Messages are securely routed through Web3Forms.</p> -->
+              <button class="btn primary magnetic" type="submit"><i data-lucide="send"></i> Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <a class="brand" href="#home">
+          <span class="brand-mark"><i data-lucide="radar"></i></span>
+          <span>MUR <small>Miniature Underwater Robot</small></span>
+        </a>
+        <div class="footer-links" aria-label="Footer links">
+          <a href="#problem">Problem</a>
+          <a href="#tech">Tech</a>
+          <a href="#demo">Demo</a>
+          <a href="#roadmap">Roadmap</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <p>&copy; 2026 Information Technology University, Lahore</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

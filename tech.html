@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Technical overview of the MUR autonomous underwater vehicle prototype.">
+  <link rel="icon" href="images/sear-logo.png">
+  <title>Technical Overview - MUR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body data-page="tech">
+  <div class="site-shell">
+    <div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
+    <nav class="nav" aria-label="Primary navigation">
+      <div class="nav-inner">
+        <a class="brand" href="index.html"><span class="brand-mark"><i data-lucide="radar"></i></span><span>MUR <small>SCALAR LABS / ITU</small></span></a>
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><i data-lucide="menu"></i></button>
+        <div class="nav-links">
+          <a class="nav-link" data-page="home" href="index.html">Home</a>
+          <a class="nav-link" data-page="problem" href="problem.html">Problem</a>
+          <a class="nav-link" data-page="tech" href="tech.html">Tech</a>
+          <a class="nav-link" data-page="demo" href="demo.html">Demo</a>
+          <a class="nav-link" data-page="roadmap" href="roadmap.html">Timeline</a>
+          <a class="nav-link" data-page="team" href="team.html">Team</a>
+          <a class="nav-link" data-page="contact" href="contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section id="tech" class="section compact">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <div class="eyebrow">Technical overview</div>
+            <h2>Prototype-grade hardware with an autonomy roadmap</h2>
+            <p class="lead">Built on ROS + Gazebo simulation, with Sliding Mode Control, LQR, and EKF SLAM for mapping.</p>
+          </div>
+          <div class="tech-layout">
+            <aside class="glass-card system-panel" data-aos="fade-right">
+              <div class="status"><i data-lucide="activity"></i> ESP32 to Raspberry Pi 4 migration planned</div>
+              <h3>Integrated AUV Stack</h3>
+              <p>MUR combines low-cost embedded control, sensor fusion, sealed chassis design, and simulation-driven autonomy into a compact underwater inspection platform.</p>
+              <div class="schematic" aria-hidden="true"><div class="core">MUR<br>AUV</div></div>
+              <p>Current stage: Prototype. Target missions include bridge inspection, infrastructure inspection, underwater mapping, pollution monitoring, mine detection, and defense applications.</p>
+            </aside>
+            <div class="tech-groups">
+              <article class="glass-card tech-group" data-aos="fade-left">
+                <div class="group-title"><h3>Sensor Stack</h3><span>Fusion layer</span></div>
+                <div class="chip-grid">
+                  <div class="chip"><strong>HMC5883L</strong><span>Magnetometer</span></div>
+                  <div class="chip"><strong>MPU6050</strong><span>Accelerometer</span></div>
+                  <div class="chip"><strong>LSM6DS3</strong><span>IMU</span></div>
+                  <div class="chip"><strong>BMP280</strong><span>Pressure sensor</span></div>
+                  <div class="chip"><strong>AHT20</strong><span>Environmental sensor</span></div>
+                </div>
+              </article>
+              <article class="glass-card tech-group" data-aos="fade-left" data-aos-delay="80">
+                <div class="group-title"><h3>Control &amp; Power</h3><span>Embedded control</span></div>
+                <div class="chip-grid">
+                  <div class="chip"><strong>ESP32</strong><span>Thruster control</span></div>
+                  <div class="chip"><strong>ESP32</strong><span>Sensor interfacing</span></div>
+                  <div class="chip"><strong>BLDC Thrusters</strong><span>1000Kv / 1400Kv dual thruster</span></div>
+                  <div class="chip"><strong>ESC</strong><span>Electronic speed control</span></div>
+                  <div class="chip"><strong>4S Battery</strong><span>10,000mAh power supply with BMS</span></div>
+                </div>
+              </article>
+              <article class="glass-card tech-group" data-aos="fade-left" data-aos-delay="160">
+                <div class="group-title"><h3>Hull, Chassis &amp; Software</h3><span>Vehicle system</span></div>
+                <div class="chip-grid">
+                  <div class="chip"><strong>3D-Printed Body</strong><span>PLA / ABS filament</span></div>
+                  <div class="chip"><strong>Acrylic Tube Housing</strong><span>Laser-cut, molded housing</span></div>
+                  <div class="chip"><strong>End Caps &amp; O-Ring Seals</strong><span>Waterproofing</span></div>
+                  <div class="chip"><strong>ROS + Gazebo</strong><span>Simulation and autonomy</span></div>
+                  <div class="chip"><strong>SMC / LQR / EKF SLAM</strong><span>Control and mapping stack</span></div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <a class="brand" href="index.html"><span class="brand-mark"><i data-lucide="radar"></i></span><span>MUR <small>Miniature Underwater Robot</small></span></a>
+        <div class="footer-links" aria-label="Footer links">
+          <a href="problem.html">Problem</a><a href="tech.html">Tech</a><a href="demo.html">Demo</a><a href="roadmap.html">Roadmap</a><a href="contact.html">Contact</a>
+        </div>
+        <p>&copy; 2026 Information Technology University, Lahore</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
+

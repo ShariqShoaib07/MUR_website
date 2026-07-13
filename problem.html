@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MUR problem domains and cost comparison for low-cost autonomous underwater inspection.">
+  <link rel="icon" href="images/sear-logo.png">
+  <title>Problem - MUR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body data-page="problem">
+  <div class="site-shell">
+    <div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
+    <nav class="nav" aria-label="Primary navigation">
+      <div class="nav-inner">
+        <a class="brand" href="index.html"><span class="brand-mark"><i data-lucide="radar"></i></span><span>MUR <small>SCALAR LABS / ITU</small></span></a>
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><i data-lucide="menu"></i></button>
+        <div class="nav-links">
+          <a class="nav-link" data-page="home" href="index.html">Home</a>
+          <a class="nav-link" data-page="problem" href="problem.html">Problem</a>
+          <a class="nav-link" data-page="tech" href="tech.html">Tech</a>
+          <a class="nav-link" data-page="demo" href="demo.html">Demo</a>
+          <a class="nav-link" data-page="roadmap" href="roadmap.html">Timeline</a>
+          <a class="nav-link" data-page="team" href="team.html">Team</a>
+          <a class="nav-link" data-page="contact" href="contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section id="problem" class="section">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <div class="eyebrow">Prototype stage</div>
+            <h2>One robot, three domains</h2>
+            <p class="lead">MUR is a low-cost autonomous underwater vehicle (AUV) built to serve commercial, environmental, and safety applications from a single hardware platform.</p>
+          </div>
+          <div class="domain-grid">
+            <article class="glass-card domain-card" data-aos="fade-up">
+              <div class="icon-box"><i data-lucide="bridge"></i></div>
+              <h3>Commercial</h3>
+              <p>Underwater bridge and infrastructure inspection, 3D mapping of underwater structures and terrain.</p>
+            </article>
+            <article class="glass-card domain-card" data-aos="fade-up" data-aos-delay="90">
+              <div class="icon-box"><i data-lucide="leaf"></i></div>
+              <h3>Environmental</h3>
+              <p>Monitoring underwater pollution levels and tracking environmental impact in real time.</p>
+            </article>
+            <article class="glass-card domain-card" data-aos="fade-up" data-aos-delay="180">
+              <div class="icon-box"><i data-lucide="shield"></i></div>
+              <h3>Safety / Military</h3>
+              <p>Underwater mine detection and related defense and security applications.</p>
+            </article>
+          </div>
+          <div class="cost-card" data-aos="fade-up">
+            <div class="cost-primary">
+              <div class="eyebrow">Cost comparison</div>
+              <span class="metric-value count" data-target="500" data-prefix="~$">0</span>
+              <p>MUR prototype cost compared to approximately $5,000 for comparable commercial underwater drones. The platform is nearly 10x cheaper.</p>
+            </div>
+            <div class="price-bars" aria-label="Cost comparison chart">
+              <div class="price-row">
+                <div class="price-label"><span>MUR prototype</span><span>~$500</span></div>
+                <div class="bar"><span style="--w: 10%"></span></div>
+              </div>
+              <div class="price-row">
+                <div class="price-label"><span>Comparable commercial underwater drones</span><span>~$5,000</span></div>
+                <div class="bar commercial"><span style="--w: 100%"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <a class="brand" href="index.html"><span class="brand-mark"><i data-lucide="radar"></i></span><span>MUR <small>Miniature Underwater Robot</small></span></a>
+        <div class="footer-links" aria-label="Footer links">
+          <a href="problem.html">Problem</a><a href="tech.html">Tech</a><a href="demo.html">Demo</a><a href="roadmap.html">Roadmap</a><a href="contact.html">Contact</a>
+        </div>
+        <p>&copy; 2026 Information Technology University, Lahore</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
+
