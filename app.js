@@ -7,6 +7,7 @@ const videoPlaceholder = document.querySelector(".video-placeholder");
 const modelViewer = document.querySelector("model-viewer");
 const modelFallback = document.querySelector(".model-fallback");
 const canvas = document.querySelector(".particles");
+const demoReel = document.querySelector("[data-demo-reel]");
 
 const setNavState = () => {
   if (!nav) return;
@@ -161,6 +162,22 @@ if (canvas) {
     resizeCanvas();
     animateParticles();
   });
+}
+
+if (demoReel && !window.__murDemoReelStarted) {
+  window.__murDemoReelStarted = true;
+  let showingSecondSet = false;
+
+  const updateDemoReel = () => {
+    demoReel.classList.toggle("is-second", showingSecondSet);
+  };
+
+  updateDemoReel();
+
+  window.setInterval(() => {
+    showingSecondSet = !showingSecondSet;
+    updateDemoReel();
+  }, 2000);
 }
 
 window.addEventListener("scroll", setNavState, { passive: true });

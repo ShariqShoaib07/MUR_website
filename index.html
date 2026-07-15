@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -8,21 +8,21 @@
   <meta property="og:title" content="MUR - Miniature Underwater Robot">
   <meta property="og:description" content="A nearly 10x cheaper autonomous underwater vehicle prototype for inspection, mapping, and mine detection.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="images/sear-logo.png">
+  <meta property="og:image" content="images/MUR_logo.PNG">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="MUR - Miniature Underwater Robot">
   <meta name="twitter:description" content="Low-cost AUV prototype developed at ITU's SCALAR LABS.">
-  <link rel="icon" href="images/sear-logo.png">
+  <link rel="icon" href="images/MUR_logo.PNG">
   <title>MUR - Miniature Underwater Robot</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=2">
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
-  <script src="app.js" defer></script>
+  <script src="app.js?v=2" defer></script>
 </head>
 <body data-page="home">
   <div class="site-shell">
@@ -31,7 +31,7 @@
     <nav class="nav" aria-label="Primary navigation">
       <div class="nav-inner">
         <a class="brand" href="#home" aria-label="MUR home">
-          <span class="brand-mark"><i data-lucide="radar"></i></span>
+          <span class="brand-mark"><img src="images/MUR_logo.PNG" alt="MUR logo"></span>
           <span>MUR <small>SCALAR LABS / ITU</small></span>
         </a>
         <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
@@ -108,7 +108,7 @@
           </div>
           <div class="domain-grid">
             <article class="glass-card domain-card" data-aos="fade-up">
-              <div class="icon-box"><i data-lucide="bridge"></i></div>
+              <div class="icon-box"><i data-lucide="building-2"></i></div>
               <h3>Commercial</h3>
               <p>Underwater bridge and infrastructure inspection, 3D mapping of underwater structures and terrain.</p>
             </article>
@@ -204,14 +204,62 @@
               <a class="btn primary magnetic" href="#contact"><i data-lucide="send"></i> Request Collaboration</a>
             </div>
           </div>
-          <div class="video-frame" data-aos="zoom-in">
-            <video controls preload="metadata" poster="assets/video-poster.jpg">
-              <source src="assets/demo.mp4" type="video/mp4">
-            </video>
-            <div class="video-placeholder" aria-hidden="true"><div class="play-button"><i data-lucide="play"></i></div></div>
+          <div class="demo-media-stack" data-aos="zoom-in">
+            <div class="video-frame demo-video-frame">
+              <video controls loop playsinline preload="metadata" poster="https://placehold.co/1280x720/05111f/7dd3fc">
+                <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+              </video>
+              <div class="video-placeholder" aria-hidden="true"><div class="play-button"><i data-lucide="play"></i></div></div>
+            </div>
+            <div class="demo-reel" aria-label="Demo image reel">
+              <div class="demo-reel-track" data-demo-reel>
+                <div class="demo-reel-group">
+                  <article class="demo-card">
+                    <img src="https://placehold.co/420x315/06121f/7dd3fc" alt="Placeholder underwater vehicle view 1" loading="lazy">
+                  </article>
+                  <article class="demo-card">
+                    <img src="https://placehold.co/420x315/071827/22d3ee" alt="Placeholder underwater vehicle view 2" loading="lazy">
+                  </article>
+                  <article class="demo-card">
+                    <img src="https://placehold.co/420x315/0b1726/38bdf8" alt="Placeholder underwater vehicle view 3" loading="lazy">
+                  </article>
+                </div>
+                <div class="demo-reel-group" aria-hidden="true">
+                  <article class="demo-card">
+                    <img src="https://placehold.co/420x315/0a1320/7dd3fc" alt="" loading="lazy">
+                  </article>
+                  <article class="demo-card">
+                    <img src="https://placehold.co/420x315/08111b/67e8f9" alt="" loading="lazy">
+                  </article>
+                  <article class="demo-card">
+                    <img src="https://placehold.co/420x315/091421/22d3ee" alt="" loading="lazy">
+                  </article>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+      <script>
+        (function () {
+          const reel = document.querySelector('[data-demo-reel]');
+          if (!reel || window.__murDemoReelStarted) return;
+
+          window.__murDemoReelStarted = true;
+          let showingSecondSet = false;
+
+          const updateReel = () => {
+            reel.classList.toggle('is-second', showingSecondSet);
+          };
+
+          updateReel();
+
+          window.setInterval(() => {
+            showingSecondSet = !showingSecondSet;
+            updateReel();
+          }, 2000);
+        })();
+      </script>
 
       <section id="roadmap" class="section compact">
         <div class="container">
@@ -327,7 +375,7 @@
     <footer class="footer">
       <div class="container footer-inner">
         <a class="brand" href="#home">
-          <span class="brand-mark"><i data-lucide="radar"></i></span>
+          <span class="brand-mark"><img src="images/MUR_logo.PNG" alt="MUR logo"></span>
           <span>MUR <small>Miniature Underwater Robot</small></span>
         </a>
         <div class="footer-links" aria-label="Footer links">
